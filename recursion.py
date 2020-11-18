@@ -24,15 +24,15 @@ def gcd(a, b):
 
 
 def compareTo(s1, s2):
+    s1 = s1[0:(len(s1) - 1)]
+    s2 = s2[0:(len(s2) - 1)]
     if len(s1) == len(s2) and len(s1) is 0:
         return 0
-    s1 = s1[0:(len(s1) - 1)]
-    ss1 = len(s1)
-    s2 = s2[0:(len(s2) - 1)]
-    ss2 = len(s2)
-    if ss1 == 0:
+    if len(s1) == 0:
         return -1
-    elif ss2 == 0:
+    elif len(s2) == 0:
         return 1
     else:
         return compareTo(s1, s2)
+
+print(compareTo('aaaa', 'bbbbb'))
